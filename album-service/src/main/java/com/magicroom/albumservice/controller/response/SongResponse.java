@@ -6,19 +6,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.time.LocalDate;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
-public class AlbumResponse {
+public class SongResponse {
     @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     int id;
-    String name;
-    LocalDate releaseDate;
-    String type;
-    String genre;
-    String coverCode;
-    String artistName;
+    private String name;
+    private String composer;
+    private String lyricist;
+    private String producer;
+    private int trackIndex;
+    private String featuringArtist;
+    private Boolean isTitle;
+    private String bugsSongId;
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+    private String albumId;
 }

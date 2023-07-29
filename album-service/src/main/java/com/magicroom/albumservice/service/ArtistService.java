@@ -25,7 +25,7 @@ public class ArtistService {
         if (artist.isPresent()) {
             artistDTO = new ArtistDTO()
                     .setName(artist.get().getName())
-                    .setDebut_date(artist.get().getDebut_date());
+                    .setDebutDate(artist.get().getDebutDate());
         }
 
 //        // Using FeignClient

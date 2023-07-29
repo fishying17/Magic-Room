@@ -8,21 +8,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.time.LocalDate;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-public class Album{
+public class Lyrics {
     @Id
     @GeneratedValue
     private Integer id;
-    private String name;
-    private int artistId;
-    private LocalDate releaseDate;
-    private String type;
-    private String genre;
-    private String coverCode;
+    private String content;
+    private String lang;
+    private Boolean defaultFlag;
+    private int songId;
+
+
 }

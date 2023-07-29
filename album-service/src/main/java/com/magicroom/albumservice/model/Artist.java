@@ -1,6 +1,8 @@
 package com.magicroom.albumservice.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +15,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Entity
-public class Artist extends BaseModel {
+public class Artist{
+    @Id
+    @GeneratedValue
+    private Integer id;
     private String name;
-    private LocalDate debut_date;
+    private LocalDate debutDate;
 }

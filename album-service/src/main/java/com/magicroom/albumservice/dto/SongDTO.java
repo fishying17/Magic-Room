@@ -5,14 +5,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.time.LocalDate;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @Accessors(chain = true)
-public class ArtistDTO {
+public class SongDTO {
     private int id;
     private String name;
-    private LocalDate debutDate;
+    private String composer;
+    private String lyricist;
+    private String producer;
+    private int trackIndex;
+    private String featuringArtist;
+    private Boolean isTitle;
+    private String bugsSongId;
+    private int albumId;
 }

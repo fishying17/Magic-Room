@@ -1,7 +1,5 @@
 package com.magicroom.albumservice.dto;
 
-import com.magicroom.albumservice.model.BaseModel;
-import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,10 +12,11 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class AlbumDTO {
-        String name;
-        LocalDate release_date;
-        String type;
-        String genre;
-        String cover_code;
-        String artist_name;
+        private int id;
+        private String name;
+        private LocalDate releaseDate;
+        private String type;
+        private String genre;
+        private String coverCode;
+        private int artistId;
 }
